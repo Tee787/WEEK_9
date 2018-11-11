@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task3
+namespace Task2
 {
-    public class Program
+    class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("******************************************************************************");
-            Console.WriteLine("*************************************Task 3***********************************");
+            Console.WriteLine("*************************************Task 2***********************************");
             Console.WriteLine("******************************************************************************");
             Console.Write("Please enter your height: ");
             double height = double.Parse(Console.ReadLine());           //double.Parse used
             Console.Write("Please enter your weight: ");
             double weight = double.Parse(Console.ReadLine());
 
-            double result = Math.Round( BMICalc(height, weight),1);     //BMICalc method being called with decimal rounding of output.
+            double result = Math.Round(BMICalc(height, weight), 1);     //BMICalc method being called with decimal rounding of output.
             Console.WriteLine(result);                                  //Console.WriteLine used to output result
 
             string output = Classify(result);                           //String Method output being recalled 
@@ -38,7 +38,7 @@ namespace Task3
                 return "underweight";
             else if (_result >= 18.5 && _result < 25)
                 return "Normal Weight";
-            else if(_result >= 25 && _result < 30)
+            else if (_result >= 25 && _result < 30)
             {
                 return "Overweight";
             }
